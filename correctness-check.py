@@ -67,8 +67,8 @@ def check_conditions ( avg_dists ):
        be less than 0.01.
     """
 
-    assert( np.mean( avg_dists[:50] ) < 1e-10 )
-    assert( np.mean( avg_dists ) < 0.01 )
+    assert( np.mean( avg_dists[:50] ) < 1e-7 )
+    assert( np.mean( avg_dists ) < 0.025 )
 
 
 if __name__ == "__main__":
