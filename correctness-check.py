@@ -60,11 +60,9 @@ def check_conditions ( avg_dists ):
     """
     Check correctness conditions for your code's output.
 
-    1) The maximum of average distances in the first 500 steps must be
-       less than 1e-10.
+    1) The average distances in the first 50 steps must be less than 1e-7.
 
-    2) The maximum of average distances over the whole 1000 steps must
-       be less than 0.01.
+    2) The average distances over the whole 1000 steps must be less than 0.025.
     """
 
     assert( np.mean( avg_dists[:50] ) < 1e-7 )
