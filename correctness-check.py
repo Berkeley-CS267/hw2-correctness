@@ -2,7 +2,7 @@
 from itertools import groupby
 import numpy as np
 import argparse
-
+import os
 
 def get_frames ( out_file ):
     """
@@ -82,3 +82,7 @@ if __name__ == "__main__":
     verf_frames = get_frames( args.verf_out )
     avg_dists = calculate_dist( test_frames, verf_frames )
     check_conditions( avg_dists )
+    test_out_name = os.path.basename(args.test_out.name)
+    verf_out_name = os.path.basename(args.verf_out.name)
+
+    print(f'Check between {test_out_name} and {verf_out_name} succeeded!')
